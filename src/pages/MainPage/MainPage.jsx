@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Button, CopyText } from "../../components/shared";
 import { generatePassword } from "../../models/Password/password";
 import "./MainPage.css";
@@ -8,14 +8,19 @@ function MainPage() {
   const [length, setLength] = useState(12);
   const [complexity, setComplexity] = useState("medium");
 
-  const handleGeneratePassword = () => {
+  const handleGeneratePassword = useCallback(() => {
     try {
       const newPassword = generatePassword(length, complexity);
       setPassword(newPassword);
     } catch (error) {
       alert(error.message);
     }
-  };
+  }, [length, complexity]);
+
+  useEffect(() => {
+    // При первом рендере или изменении параметров генерируем новый пароль
+    handleGeneratePassword();
+  }, [handleGeneratePassword]);
 
   return (
     <div className="container">
@@ -78,7 +83,7 @@ function MainPage() {
       </main>
 
       <footer>
-        <p>© 2023 Pass-Gen. Все права защищены.</p>
+        <p>© 2025 Pass-Gen. Все права защищены.</p>
       </footer>
     </div>
   );
