@@ -3,7 +3,7 @@ import MainPage from "./pages/MainPage/MainPage";
 import TestPage from "./pages/TestPage/TestPage";
 
 function App() {
-  return import.meta.env.MODE ? <TestPage /> : <MainPage />;
+  return import.meta.env.DEV ? <TestPage /> : <MainPage />;
 }
 
 export default App;
