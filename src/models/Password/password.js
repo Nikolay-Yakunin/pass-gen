@@ -30,7 +30,7 @@ const CHAR_SETS = {
   /**
    * Генерирует безопасный пароль по заданным параметрам
    * @param {number} length — длина пароля (рекомендуется от 12)
-   * @param {'low'|'medium'|'high'|'very_high'} complexity — уровень сложности
+   * @param {'low'|'medium'|'high'} complexity — уровень сложности
    * @returns {string}
    */
   export function generatePassword(length, complexity) {
