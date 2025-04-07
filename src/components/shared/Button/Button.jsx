@@ -6,9 +6,9 @@ import styles from './Button.module.css';
  * @param {*} props 
  * @returns jsx
  */
-export const Button = (props) => {
+export const Button = ({children}) => {
     return (
-        <button className={`${styles.button}`}>{props}</button>
+        <button className={`${styles.button}`}>{children}</button>
     )
 }
 
