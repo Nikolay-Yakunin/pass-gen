@@ -25,7 +25,7 @@ function TestPage() {
         </div>
         <div className="row">
           <h2>Pass gen</h2>
-          <span>{pass ? pass : "Тут будет пароль..."}</span>
+          <CopyText>{pass ? pass : "Тут будет пароль..."}</CopyText>
           <div>
             <button onClick={() => handlerComplexity("low")}>Low</button>
             <button onClick={() => handlerComplexity("medium")}>medium</button>

@@ -1,9 +1,8 @@
 import "./App.css";
-import MainPage from "./pages/MainPage/MainPage";
-import TestPage from "./pages/TestPage/TestPage";
+import PasswordGeneratorPage from "./pages/PasswordGeneratorPage";
 
 function App() {
-  return import.meta.env.DEV ? <TestPage /> : <MainPage />;
+  return <PasswordGeneratorPage />;
 }
 
 export default App;

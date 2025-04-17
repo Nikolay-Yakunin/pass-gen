@@ -11,12 +11,6 @@
 5. useRef – для фокуса на кнопке генерации.
 6. useMemo – для оптимизации генерации пароля
 
-# Features
-
-## UI
-- Button
-- CopyText
-
 ## Logic
 // Генерирует случайный пароль
 - genPassword() return string
